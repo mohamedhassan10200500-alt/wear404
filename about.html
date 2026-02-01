@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>من نحن | Urban Style</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Tahoma,Arial;
+  background:#f7f7f7;
+  color:#111;
+  line-height:1.9;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(90deg,#000,#1a1a1a);
+  padding:15px 0;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+}
+.logo{
+  color:#d4af37;
+  font-size:24px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:bold;
+}
+nav a:hover{color:#d4af37}
+
+/* ===== HERO ===== */
+.about-hero{
+  background:linear-gradient(135deg,#000,#222);
+  color:#fff;
+  padding:100px 20px;
+  text-align:center;
+}
+.about-hero h1{
+  color:#d4af37;
+  font-size:44px;
+  margin-bottom:20px;
+}
+.about-hero p{
+  max-width:850px;
+  margin:auto;
+  font-size:19px;
+  color:#eee;
+}
+
+/* ===== CONTENT ===== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+.section-box{
+  background:#fff;
+  padding:35px;
+  border-radius:25px;
+  margin-bottom:50px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+  border-right:6px solid #d4af37;
+}
+
+.section-box h2{
+  color:#000;
+  margin-bottom:18px;
+  font-size:28px;
+}
+
+.section-box p{
+  font-size:17px;
+  color:#333;
+}
+
+/* ===== VALUES ===== */
+.values{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+.value{
+  background:linear-gradient(135deg,#fff,#f3f3f3);
+  border:1px solid #d4af37;
+  padding:30px;
+  border-radius:22px;
+  transition:.4s;
+}
+.value:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.value h3{
+  color:#d4af37;
+  margin-bottom:12px;
+  font-size:20px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#000;
+  color:#d4af37;
+  text-align:center;
+  padding:22px;
+  letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Urban Style</div>
+    <div>
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="index.html#products">المنتجات</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </div>
+  </nav>
+</header>
+
+<div class="about-hero">
+  <h1>WEAR 404</h1>
+  <p>
+    مش مجرد ملابس  
+    دي هوية وستايل بيعبر عنك  
+    لكل شاب واثق في نفسه وعاوز يبان مختلف
+  </p>
+</div>
+
+<section>
+
+  <div class="section-box">
+    <h2>حكايتنا</h2>
+    <p>
+      WEAR 404 اتأسست علشان نكسر الروتين  
+      ونقدّم لبس شبابي عملي وأنيق  
+      كل قطعة بتطلع من عندنا معمولها حساب  
+      من الخامة للتفصيلة للّون  
+      علشان تمثل شخصيتك في كل مكان
+    </p>
+  </div>
+
+  <div class="section-box">
+    <h2>منتجاتنا</h2>
+    <p>
+      بنشتغل على خامات مريحة تعيش معاك  
+      تصميمات عصرية مواكبة للموضة  
+      ألوان ثابتة وشكل أنيق  
+      سواء خروج أو جامعة أو شغل  
+      Urban Style دايمًا اختيارك الصح
+    </p>
+  </div>
+
+  <div class="section-box">
+    <h2>ليه تختار  WEAR 404</h2>
+
+    <div class="values">
+      <div class="value">
+        <h3>جودة مضمونة</h3>
+        <p>
+          بنراجع كل قطعة قبل ما توصل لعميلنا  
+          علشان تاخد منتج يليق بيك
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>ستايل عصري</h3>
+        <p>
+          تصميمات شبابية قوية  
+          تناسب كل الأذواق
+        </p>
+      </div>
+
+      <div class="value">
+        <h3>سعر عادل</h3>
+        <p>
+          جودة عالية مقابل سعر مناسب  
+          قيمة حقيقية لفلوسك
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 WEAR 404 – Style That Represents You
+</footer>
+
+</body>
+</html>

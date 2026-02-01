@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منتجات حسب السعر</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px; }
+  .buttons { margin-bottom: 20px; }
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover { background-color: #e6c200; }
+
+  .products { display: flex; flex-wrap: wrap; }
+  .product {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>منتجاتنا حسب السعر</h1>
+
+<div class="buttons">
+  <button onclick="filterPrice(400)">400</button>
+  <button onclick="filterPrice(500)">500</button>
+  <button onclick="filterPrice(600)">600</button>
+  <button onclick="filterPrice(700)">700</button>
+  <button onclick="filterPrice(800)">800</button>
+  <button onclick="filterPrice(900)">900</button>
+  <button onclick="filterPrice(1000)">1000</button>
+  <button onclick="filterPrice(1100)">1100</button>
+  <button onclick="filterPrice(1200)">1200</button>
+  <button onclick="filterPrice(1300)">1300</button>
+  <button onclick="showAll()">الكل</button>
+</div>
+
+<div class="products">
+  <div class="product" data-price="400">منتج 1 - السعر: 400</div>
+  <div class="product" data-price="500">منتج 2 - السعر: 500</div>
+  <div class="product" data-price="400">منتج 3 - السعر: 400</div>
+  <div class="product" data-price="600">منتج 4 - السعر: 600</div>
+  <div class="product" data-price="500">منتج 5 - السعر: 500</div>
+  <div class="product" data-price="700">منتج 6 - السعر: 700</div>
+  <div class="product" data-price="800">منتج 7 - السعر: 800</div>
+  <div class="product" data-price="900">منتج 8 - السعر: 900</div>
+  <div class="product" data-price="1000">منتج 9 - السعر: 1000</div>
+</div>
+
+<script>
+function filterPrice(price) {
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    if (parseInt(product.getAttribute('data-price')) === price) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
+
+function showAll() {
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    product.style.display = 'block';
+  });
+}
+</script>
+
+</body>
+</html>

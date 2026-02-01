@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تواصل معنا</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    /* زر تواصل معنا */
+    .contact-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #444;
+    }
+
+    /* صفحة تواصل */
+    .contact-page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px 80px;
+    }
+
+    .contact-page h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      background: #f0f0f0;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- زر تواصل معنا (مثال في الهيدر) -->
+  <a href="#contact" class="contact-btn">تواصل معنا</a>
+
+  <!-- صفحة التواصل -->
+  <section class="contact-page" id="contact">
+
+    <h1>تواصل معنا</h1>
+    <p class="subtitle">نحن سعداء بخدمتك في أي وقت</p>
+
+    <div class="contact-container">
+
+      <!-- معلومات الاتصال -->
+      <div class="contact-info">
+        <h2>معلومات الاتصال</h2>
+        <p>📍 العنوان: اسيوط – القوصيه</p>
+        <p>📞 الهاتف: 01025910607</p>
+        <p>☎️ الخط الأرضي: 022345678</p>
+        <p>📧 البريد الإلكتروني: info@yourstore.com</p>
+        <p>🕒 مواعيد العمل: يوميًا من 10 صباحًا إلى 10 مساءً</p>
+        <p>💬 واتساب: 01025910607</p>
+      </div>
+
+      <!-- فورم التواصل -->
+      <div class="contact-form">
+        <h2>راسلنا</h2>
+        <form>
+          <input type="text" placeholder="الاسم الكامل" required>
+          <input type="email" placeholder="البريد الإلكتروني" required>
+          <input type="text" placeholder="رقم الهاتف">
+          <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+          <button type="submit">إرسال الرسالة</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
