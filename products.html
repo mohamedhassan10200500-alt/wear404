@@ -130,11 +130,11 @@ margin-top:40px;
 
 <div class="buttons">
   <button onclick="showAll()">الكل</button>
-  <button onclick="filterPrice(500)">500</button>
-  <button onclick="filterPrice(600)">600</button>
-  <button onclick="filterPrice(700)">700</button>
-  <button onclick="filterPrice(900)">900</button>
-  <button onclick="filterPrice(1200)">1200</button>
+  <button onclick="filterPrice(500)">500-599</button>
+  <button onclick="filterPrice(600)">600-699</button>
+  <button onclick="filterPrice(700)">700-799</button>
+  <button onclick="filterPrice(900)">900-1199</button>
+  <button onclick="filterPrice(1200)">1200-1949</button>
   <button onclick="filterPrice(1950)">1950</button>
 </div>
 
@@ -456,27 +456,38 @@ margin-top:40px;
 <footer>© 2026 WEAR 404</footer>
 
 <script>
-function filterPrice(price){
-  document.querySelectorAll('.product').forEach(p=>{
-    p.style.display = parseInt(p.dataset.price)==price ? 'block':'none';
+function filterRange(start){
+  document.querySelectorAll('.product').forEach(product=>{
+    const price = parseInt(product.dataset.price);
+
+    if(start === 1950){
+      product.style.display = price >= 1950 ? 'block' : 'none';
+    } else {
+      product.style.display =
+        price >= start && price <= start + 99
+        ? 'block'
+        : 'none';
+    }
   });
 }
+
 function showAll(){
-  document.querySelectorAll('.product').forEach(p=>p.style.display='block');
+  document.querySelectorAll('.product').forEach(p=>{
+    p.style.display = 'block';
+  });
 }
 
 function orderNow(name,price){
   const phone="201000764695";
-  const msg=`السلام عليكم 👋\nعاوز أطلب من متجر WEAR 404\n\n📦 المنتج: ${name}\n💰 السعر: ${price} جنيه`;
+  const msg=`السلام عليكم 👋
+عاوز أطلب من متجر WEAR 404
+
+📦 المنتج: ${name}
+💰 السعر: ${price} جنيه`;
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
 }
-
-showAll();
 </script>
 
-</body>
-
-</html>
 
 
 
