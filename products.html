@@ -457,7 +457,7 @@ margin-top:40px;
 
 <script>
 
-<script>
+
 function filterRange(min, max){
   document.querySelectorAll('.product').forEach(p=>{
     const price = parseInt(p.dataset.price);
@@ -471,7 +471,7 @@ function showAll(){
     p.style.display='block';
   });
 }
-</script>
+
 
 function orderNow(name,price){
   const phone="201000764695";
@@ -483,6 +483,7 @@ function orderNow(name,price){
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');
 }
 </script>
+
 
 
 
