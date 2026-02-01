@@ -456,29 +456,26 @@ margin-top:40px;
 <footer>© 2026 WEAR 404</footer>
 
 <script>
-
-
-function filterPrice(price){
-  document.querySelectorAll('.product').forEach(p=>{
-    p.style.display = parseInt(p.dataset.price)==price ? 'block':'none';
-  });
-}
-function showAll(){
-  document.querySelectorAll('.product').forEach(p=>p.style.display='block');
-}
-
 function orderNow(name,price){
-  const phone="201000764695";
-  const msg=السلام عليكم 👋\nعاوز أطلب من متجر WEAR 404\n\n📦 المنتج: ${name}\n💰 السعر: ${price} جنيه;
-  window.open(https://wa.me/${phone}?text=${encodeURIComponent(msg)},'_blank');
-}
+  const phone = "201000764695";
+  const msg = `السلام عليكم 👋
+عاوز أطلب من متجر WEAR 404
 
-showAll();
+📦 المنتج: ${name}
+💰 السعر: ${price} جنيه`;
+
+  window.open(
+    `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
+    '_blank'
+  );
+}
 </script>
+
 
 </body>
 
 </html>
+
 
 
 
